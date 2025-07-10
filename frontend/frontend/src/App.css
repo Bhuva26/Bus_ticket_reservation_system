@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://cdn.pixabay.com/photo/2019/05/19/23/26/bus-4215582_1280.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.app {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.main {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.form input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #218838;
+}
+
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ticket-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 40px;
+}
