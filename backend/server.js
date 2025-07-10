@@ -9,7 +9,6 @@ app.use(express.json());
 
 const ticketRoutes = require('./routes/tickets');
 app.use('/api/tickets', ticketRoutes);
-
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB connected');

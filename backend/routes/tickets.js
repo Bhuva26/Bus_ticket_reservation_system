@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Ticket = require('../models/Ticket');
-
-// Get all tickets
 router.get('/', async (req, res) => {
   try {
     const tickets = await Ticket.find();
@@ -11,8 +9,6 @@ router.get('/', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-
-// Create a new ticket
 router.post('/', async (req, res) => {
   const newTicket = new Ticket(req.body);
   try {
@@ -22,11 +18,8 @@ router.post('/', async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
-
-// Update an existing ticket
 router.put('/:id', async (req, res) => {
   try {
-    // Find the ticket by ID and update with the new data from the body
     const updatedTicket = await Ticket.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!updatedTicket) {
       return res.status(404).json({ message: 'Ticket not found' });
@@ -37,7 +30,6 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete a ticket
 router.delete('/:id', async (req, res) => {
   try {
     const ticket = await Ticket.findByIdAndDelete(req.params.id);
